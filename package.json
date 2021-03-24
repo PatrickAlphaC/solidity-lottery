@@ -8,7 +8,8 @@
     "console:kovan": "npx truffle console --network kovan",
     "depcheck": "echo '@chainlink/box' && depcheck --ignore-dirs=build/contracts || true",
     "solhint": "solhint ./contracts/**/*.sol",
-    "lint": "yarn solhint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "migrate:dev": "npx truffle migrate --reset --network cldev",
     "migrate:kovan": "npx truffle migrate --network kovan",
     "test": "npx truffle test"
@@ -19,7 +20,9 @@
     "@openzeppelin/contracts": "^3.4.0",
     "@truffle/hdwallet-provider": "1.0.40",
     "@types/styled-components": "^5.1.9",
-    "dotenv": "^8.2.0"
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.22.0"
   },
   "devDependencies": {
     "@chainlink/belt": "^0.0.3",
